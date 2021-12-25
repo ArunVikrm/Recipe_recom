@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html{
+  scroll-behavior: smooth;
+  }
+  body{
+    
+    text-align: center;
+    background: url("/static/images/white_bg.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+  
+  }
+  a{
+      text-decoration: none;
+  }
+  .head{
+    margin-top: 20px;
+  }
+  .box h2{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  .box h4{
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px groove #001a33;
+    margin-top: 20px;
+    padding: 1px;
+  }
+  .box h4 img{
+    width: 20px;
+    height: 20px;
+  }
+  #topbtn{
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      background: #e5316e;
+      bottom: 20px;
+      right: 2%;
+      text-decoration: none;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.4s;
+      box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 26%);
+  }
+  
+  /* for mobile phones */
+  @media only screen and (max-width: 550px){
+  .box{
+    width: auto;
+    height: 350px;
+    margin: 20px;
+  }
+  .data-row{
+      display: flex;
+      margin: 20px 20px 40px 35px;
+      flex-direction: column;
+      max-width: 300px;
+      height: auto;
+      background: #fff;
+      border-radius: 5px;
+      font-family: 'Poppins';
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  }
+  
+  .data-row .container{
+      background: #e5316e;
+      opacity: 0.9;
+      text-align: center;
+      padding: 20px; 
+  }
+  .container p{
+    font-size: 15px;
+    color: #fff;
+    margin: 10px;
+  }
+  .container h1{
+    border: 2px dashed #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #001a33;
+  }
+  #topbtn{
+    width: 40px;
+    height: 40px;
+    right: 0;
+    line-height: 40px;
+  }
+  }
+  /* for laptops and pc's */
+  @media only screen and (min-width: 550px){
+  .box{
+    width: auto;
+    height: 200px;
+    margin: 20px;
+  
+  }
+  .data-row{
+      display: flex;
+      margin: 20px 150px 40px 150px;
+      flex-direction: column;
+      width: 80vw;
+      height: auto;
+      background: #fff;
+      border-radius: 5px;
+      font-family: 'Poppins';
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  }
+  .data-row .container{
+  
+      background: #e5316e;
+      opacity: 0.9;
+      text-align: center;
+      padding: 20px; 
+  }
+  
+  .container p{
+    font-size: 18px;
+    color: #fff;
+    margin: 10px;
+  }
+  .container h1{
+    border: 2px dashed #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #001a33;
+    font-size: 25px;
+  }
+  
+  
+  }

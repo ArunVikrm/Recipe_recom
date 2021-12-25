@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Recipe | Recommendations</title>
+        <link rel="shortcut icon" href="{% static 'images/burger.png' %}">
+
+
+         <!-- google fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+        
+    </head>
+
+    
+
+    <body>
+        <!-- head section -->
+        <section class="head">
+            <div class="box">
+                <h2>Data driven Recipe Recommendation System</h2>
+                <p>Upload the image of ingredients and get the recipes !</p>
+            </div>
+            <div class="scroll">
+                <a href="#foot">
+                <span></span>
+                <span></span>
+                <span></span>
+                </a>
+            </div>
+        </section>
+        <!-- foot section -->
+        <section class="foot">
+            <div class="container">
+                <div class="wrapper">
+                    <!-- <div class="btn-group"> -->
+                        <!-- <button type="button" class="btn btn-danger">Action</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                        </button> -->
+                        <!-- <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Fruits</a></li>
+                        <li><a class="dropdown-item" href="#">Vegetables</a></li>
+                        <li><a class="dropdown-item" href="#">Nuts and Raisins</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Non Veg Items</a></li>
+                        </ul> -->
+                    <!-- </div> -->
+                    
+                    <select id="ddlViewBy">
+                        {% for c in category %}
+                            <option class="dropdown-item">{{c.name}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <form class="file-catcher">
+                        <input class="file-input" type="file" name="file" hidden />
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Browse File to Upload</p>
+                    </form>
+                    <section class="progress-area"></section>
+                    <section class="uploaded-area"></section>
+                </div>
+                <a href="#"><button id="custom-btn">Let's cook some real food!<img src="{% static 'images/harvest.png' %}"></button></a>
+            </div>
+        </section>
+        <!-- foot section for taking pics -->
+        <section class="foot">
+            <a class="container">
+                <div class="wrapper">
+                    <form action="#">
+                    <input type="file" name="image" accept="image/*" capture="capture" class="file-cam" multiple hidden />
+                        <i class="fas fa-solid fa-camera"></i>
+                        <p>Click a pic :)</p>
+                    </form>
+                </div>
+                <div class="img-box">
+                
+                </div>
+                <a href="#"><button id="custom-btn">Let's cook some real food!<img src="{% static 'images/harvest.png' %}"></button></a>
+            </div>
+           
+        </section>
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+    </body>
+
+</html>

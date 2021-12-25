@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    display: grid;
+    height: 100%;
+    scroll-behavior: smooth;
+    text-align: center;
+  
+  }
+  a{
+      text-decoration: none;
+  }
+  .head{
+      background-image: url("/static/images/h2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+  }
+  .box{
+      margin-top: 10%;  
+  }
+  .box h2{
+      color: white;
+      font-size: 4rem;
+      font-family: 'Poppins';
+      font-weight: 500;
+  }
+  .box p{
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Poppins';
+      font-weight: 500;
+      margin-top: 20px;
+  }
+  .scroll{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      
+  }
+  .scroll span{
+      display: block;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      margin: -5px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      animation: animate 2s infinite;
+  }
+  .scroll span:nth-child(2){
+      animation-delay: -0.2s;
+  }
+  .scroll span:nth-child(3){
+      animation-delay: -0.4s;
+  }
+  @keyframes animate{
+      0%{
+          opacity: 0;
+          transform: rotate(45deg) translate(-20px, -20px);
+      }
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+          transform: rotate(45deg) translate(20px, 20px);
+      }
+  }
+  .foot{
+      background-image: url("/static/images/h1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 110vh;
+   
+  }
+  .container{
+    height: 300px;
+    width: 500px;
+    top: 1%;
+    left: 60%;
+    position: relative;
+  }
+  
+  #custom-btn{
+      margin-left: 0px;
+      margin-top: 10px;
+    display: block;
+    width: 400px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 60px;
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #e5316e, #e93f78, #ed4a81, #f1568b, #f46094);
+    transition: all 3s ease;
+  }
+  #custom-btn:hover{
+      background-image: linear-gradient(to right top, #e53e7f, #e93773, #eb3066, #ed2b58, #ed284a);
+  }
+  #custom-btn img{
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+  }
+  
+  /* for mobile phones */
+  @media only screen and (max-width: 550px){
+      .head{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         
+      }
+      .box{
+          width: 350px;
+          height: 350px;
+          margin-top:1%; 
+          margin-left: -120px;
+       
+      }
+      .box h2{
+          font-size: 34px;
+          text-align: center;
+      }
+      .box p{
+          font-size: 25px;
+          margin-top: 40px;
+      }
+      .scroll{
+          top: 90%;
+          left: 52%;
+      }
+      .container{
+          height: 300px;
+          width: 500px;
+          top: 15%;
+          left: 7%;
+          position: relative;
+      }
+      #custom-btn{
+           width: 300px;
+           margin-top: 25px;
+           font-size: 15px;
+      }
+      .foot{
+          height: 110vh;
+      }
+      .img-box{
+          width: 500px;
+          height: 300px;
+          border-radius: 2px dashed #e53e7f;
+          display: none;
+      }
+      .img-box.active{
+          display: block;
+      }
+      
+  
+  }
+  
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+      .head{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         
+      }
+      .box{
+          width: 350px;
+          height: 350px;
+          margin-top: -30%;
+          margin-left: -120px;
+       
+      }
+      .box h2{
+          font-size: 36px;
+          text-align: center;
+      }
+      .box p{
+          font-size: 25px;
+          margin-top: 40px;
+      }
+      .scroll{
+          top: 60%;
+          left: 43%;
+      }
+      .container{
+          height: 300px;
+          width: 500px;
+          top: 10%;
+          left: 15%;
+          position: relative;
+      }
+      .foot{
+          height: 110vh;
+      }
+  
+  }
